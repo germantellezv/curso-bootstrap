@@ -22,7 +22,7 @@
             <a class="navbar-brand" href="#">
                 <img src="images/platzi-logo.png" alt="Platzi logo"> Conf Hawai
             </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -42,7 +42,8 @@
                         <a class="nav-link" href="#conviertete-en-orador">Conviertete en orador</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-platzi" href="#">Comprar tickets</a>
+                        <a class="nav-link text-platzi" href="#" data-toggle="modal" data-target="#modalCompra">Comprar
+                            tickets</a>
                     </li>
 
                 </ul>
@@ -80,7 +81,8 @@
                                 nivel que tenemos para ti. Te esperamos!
                             </p>
                             <a href="#" class="btn btn-outline-light">Quiero ser orador</a>
-                            <button type="button" class="btn btn-platzi">Comprar tickets</button>
+                            <button type="button" class="btn btn-platzi" data-toggle="modal"
+                                data-target="#modalCompra">Comprar tickets</button>
                         </div>
                     </div>
                 </div>
@@ -230,7 +232,8 @@
                         </div>
                         <div class="row">
                             <div class="form-group col">
-                                <textarea name="text" class="form-control form-control-lg" placeholder="Sobre qué quieres hablar"></textarea>
+                                <textarea name="text" class="form-control form-control-lg"
+                                    placeholder="Sobre qué quieres hablar"></textarea>
                                 <small class="form-text text-muted">
                                     Recuerda incluir un titulo para tu charla
                                 </small>
@@ -288,6 +291,45 @@
     </footer>
     <!-- /Footer -->
 
+    <!-- Modal -->
+    <div class="modal fade" id="modalCompra" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">Comprar tickets</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <!-- Cuerpo del modal -->
+                <div class="modal-body">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col">
+                                <!-- Input group -->
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="basic-addon1">@</span>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+                                        aria-describedby="basic-addon1">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="alert alert-warning" role="alert">
+                        Recibirás un correo de confirmación si sales ganador
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-platzi">Comprar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Modal -->
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -300,7 +342,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
-        <script src="index.js"></script>
+    <script src="index.js"></script>
 </body>
 
 </html>
